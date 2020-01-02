@@ -46,7 +46,7 @@ class ChatFrame extends PureComponent {
         this.setState({draftMessage});
     };
 
-    onScrollTop = (page) => {
+    onLoadMore = (page) => {
         page = page + 1;
         this.setState({page});
     };
@@ -57,7 +57,7 @@ class ChatFrame extends PureComponent {
                 Header
             </header>
             <Chat chatHistory={this.state.chatHistory} newMessages={this.state.newMessages}
-                  draftMessage={this.state.draftMessage} onScrollTop={this.onScrollTop}/>
+                  draftMessage={this.state.draftMessage} onLoadMore={this.onLoadMore}/>
             <MessageInput onSendMessage={this.onSendMessage} onChangeMessage={this.onMessageChange}/>
         </Div100vh>
     );

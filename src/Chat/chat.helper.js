@@ -83,7 +83,7 @@ export const getFloatingDatePosition = (rows, floatingDateMaxOffsetFromWindowTop
         : chatSettings.FLOATING_DATE_MAX_OFFSET_FROM_TOP_BAR;
 };
 
-export const getMessagesSectionDate = (timestamp) => {
+const getMessagesSectionDate = (timestamp) => {
     if (isToday(timestamp)) return MessageSectionDate.TODAY;
     if (isYesterday(timestamp)) return MessageSectionDate.YESTERDAY;
     if (isThisYear(timestamp)) return format(timestamp, MessageSectionDate.WITHOUT_YEAR);
